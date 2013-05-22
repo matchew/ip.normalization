@@ -43,12 +43,15 @@ def normalize(ip):
 
 
 def main():
-    item = sys.argv[1]
+    try:
+        item = sys.argv[1]
+    except:
+        print 'Usage: %s IPFILE' % (sys.argv[0])
+        sys.exit(1)
     f = open(sys.argv[1],'r+')
     print '\n\n\nIPS FROM %s' % (item)
     o = open(item + '.ips', 'w+')
     for line in f:
-        print line.strip()
         x = normalize(line.strip())
         print "TRANSFORM %s to BECOME: " % (line.strip())
         for i in x: 
