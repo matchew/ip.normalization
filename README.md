@@ -10,7 +10,7 @@ usage:
 
 ## TODO
 
- [] move to virtualenv
- [] clean up
- [] update to python 3.x
- [] create examples  
+ - [ ] move to virtualenv
+ - [ ] clean up
+ - [ ] update to python 3.x
+ - [ ] create examples  
