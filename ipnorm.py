@@ -1,4 +1,4 @@
-#!/usr/bin/python2.7
+#!/usr/bin/env python
 import sys
 import netaddr
 import re
@@ -46,16 +46,16 @@ def main():
     try:
         item = sys.argv[1]
     except:
-        print 'Usage: %s IPFILE' % (sys.argv[0])
+        print('Usage: %s IPFILE' % (sys.argv[0]))
         sys.exit(1)
     f = open(sys.argv[1],'r+')
-    print '\n\n\nIPS FROM %s' % (item)
+    print('\n\n\nIPS FROM %s' % (item))
     o = open(item + '.ips', 'w+')
     for line in f:
         x = normalize(line.strip())
-        print "TRANSFORM %s to BECOME: " % (line.strip())
+        print("TRANSFORM %s to BECOME: " % (line.strip()))
         for i in x: 
-            print i
+            print(i)
             o.write(str(i) + '\n')
     o.close()
     f.close()
@@ -68,13 +68,13 @@ if __name__ == '__main__':
 '''  
 for item in os.listdir('.'):
     f = open(item,'r+')
-    print '\n\n\nIPS FROM %s' % (item)
+    print('\n\n\nIPS FROM %s' % (item))
     o = open(item + '.ips', 'w+')
     for line in f:
         x = normalize(line.strip())
-        print "TRANSFORM %s to BECOME: " % (line.strip())
+        print("TRANSFORM %s to BECOME: " % (line.strip()))
         for i in x: 
-            print i
+            print(i)
             o.write(str(i) + '\n')
     o.close()
     f.close()
